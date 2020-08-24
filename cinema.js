@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CinemaSchema = new Schema({
-    id: Number,
+    id: String,
     name: String,
     postcode: Number,
     city: String,
