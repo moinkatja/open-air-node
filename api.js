@@ -11,6 +11,14 @@ router.get("/cinemas", (req, res) => {
 
 });
 
+router.get("/search", (req, res, next) => {
+    const searchedField = req.query.city;
+    Cinema.find({city:{$regex: searchedField, $options: "$i"}})
+    .then(cinema => {
+        res.send(cinema);
+    })
+ });
+
 router.post("/cinemas", (req, res) => {
     Cinema.create(req.body)
     .then(cinema => {
