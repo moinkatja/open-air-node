@@ -7,6 +7,7 @@ const CinemaSchema = new Schema({
     postcode: Number,
     city: String,
     street: String, 
+    pic: String,
     tel: String,
 })
 
