@@ -12,8 +12,8 @@ router.get("/cinemas", (req, res) => {
 });
 
 router.get("/search", (req, res, next) => {
-    const searchedField = req.query.bundesland;
-    Cinema.find({bundesland:{$regex: searchedField, $options: "$i"}})
+    const searchedField = req.query.region;
+    Cinema.find({region:{$regex: searchedField, $options: "$i"}})
     .then(cinema => {
         res.send(cinema);
     })
