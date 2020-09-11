@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const CinemaSchema = new Schema({
     id: String,
     name: String,
+    bundesland: String,
     postcode: Number,
     city: String,
     street: String, 
